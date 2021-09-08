@@ -1,0 +1,25 @@
+<p>Listado Heroes</p>
+<!-- Nota: *ngIf se utiliza para formar un condicionale en angular  en caso de no cumplirse la 
+condicion mostraria el template de mas abajo-->
+<div *ngIf=" heroeBorrado;else noBorrado ">
+  <h3>heroe Borrado:<small>{{heroeBorrado}}</small></h3>
+</div>
+
+
+<!-- Nota: El ng-template mostrara el contenido del template en 
+  el html en funcion de la condicion del *ngIf -->
+<!-- Nota2:el signo numeral seguido de un nombre es lo que se conoce como referencia local  -->
+<ng-template #noBorrado>
+  <h3>No se ha borrado nada.</h3>
+</ng-template>
+
+<button (click)="borrarHeroe()">Borrar Heroe</button>
+
+<ul>
+  <!-- Nota: *ngFor se utiliza para barrer un array en angular-->
+  <li *ngFor="let heroe of heroes;let i =index">
+    {{i+1}} - {{heroe}}
+  </li>
+
+
+</ul>
