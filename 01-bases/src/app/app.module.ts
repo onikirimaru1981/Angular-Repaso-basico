@@ -3,8 +3,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { HeroesModule } from './heroes/heroes.module';
-import { ContadorComponent } from './contador/contador/contador.component';
 import { ContadorModule } from './contador/contador.module';
+import { DbzModule } from './dbz/dbz.module';
 
 // Tarea:
 // Crear un modulo llamado contadorModule
@@ -18,7 +18,9 @@ import { ContadorModule } from './contador/contador.module';
   imports: [
     BrowserModule,
     HeroesModule, // Modulo creado anteriormente y utilizado aqui
-    ContadorModule
+    ContadorModule,
+    DbzModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

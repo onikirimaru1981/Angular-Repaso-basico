@@ -1,0 +1,27 @@
+<h3>Agregar <small>{{nuevo.nombre}}</small></h3>
+<hr>
+<!-- Con $event escuchamos lo que ocurre al agregar en el formulario -->
+
+<!-- <form (submit)="agregar($event)"> -->
+
+<!-- Con ngSubmit y el modulo FormsModule evitamos el refresco de la pagina pero si mostrando los cambios,
+    podriamos obviarlo y pasaria lo mismo,es eleccion nuestra ponerlo -->
+
+<form (ngSubmit)="agregar()">
+
+  <!-- Con la sintaxis de value entre [] lo que hacemos es indicar a angular que del lado del archivo 
+ts hay valores que deseamos enlazar aqui  -->
+
+  <!-- <input type="text" placeholder="Nombre" [value]="nuevo.nombre" (input)="cambiarNombre($event)"> -->
+
+  <!-- Utilizando ngModel,sintaxis-->
+
+  <input type="text" placeholder="Nombre" name="nombre" [(ngModel)]="nuevo.nombre">
+
+  <!-- Nota:colocamos el name con el valor que deseamos utilizar,y luego el ngModel entre [] para escuchar el evento,
+         y si queremos emitir colocaremos () dentro del corchete [(ngModel)] y la propiedad del objeto -->
+
+  <input type=" text" placeholder="Poder" name="poder" [(ngModel)]="nuevo.poder">
+
+  <button type="submit">Agregar</button>
+</form>

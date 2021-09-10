@@ -10,7 +10,8 @@ import { ListadoComponent } from './listado/listado.component';
         ListadoComponent
     ],
     exports: [// Exportacion de lo que deseo hacer visible fuera del modulo
-        ListadoComponent
+        ListadoComponent,
+        HeroeComponent
     ],
     imports: [// Aqui estaran los modulos externos
 

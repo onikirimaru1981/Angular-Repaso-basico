@@ -1,0 +1,9 @@
+<h3>Personajes</h3>
+<hr>
+<ul>
+  <li *ngFor="let personaje of personajes;let i =index">
+    {{personaje.nombre }} - {{personaje.poder|number}}
+    <!-- Nota:poniendo el pipe añadimos comas a los numeros -->
+  </li>
+
+</ul>

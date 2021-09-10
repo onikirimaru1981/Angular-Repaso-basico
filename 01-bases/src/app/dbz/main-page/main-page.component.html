@@ -1,0 +1,30 @@
+<h1>Dragon Ball Z</h1>
+<hr>
+
+<div class="row">
+
+  <div class="col">
+    <!-- <app-agregar [nuevo]="nuevo"></app-agregar> -->
+    <!-- Nota: aqui es donde utilizamos el input que nos viene del componente padre -->
+    <!-- Nota2: El segundo personajes es el que viene del main-page.component.ts  y el primero 
+      es el que nosotros definimos en el componente hijo-->
+
+    <!-- // ********************* CAMBIOS REFACTORIZANDO CODIGO*************************** -->
+
+    <!-- <app-personajes [data]="personajes"></app-personajes> -->
+    <app-personajes></app-personajes>
+
+    <!-- Nota3: data definida en el componente ts hijo -->
+  </div>
+  <div class="col">
+    <!-- Nota: Aqui es donde pondremos el emit del hijo,en este caso onNuevoPersonaje,y creamos un metodo en el componente padre que dispare este,
+    en este caso se llamara agregarNuevoPersonaje() -->
+
+
+    <!-- // ********************* CAMBIOS REFACTORIZANDO CODIGO*************************** -->
+
+    <!-- <app-agregar [nuevo]="nuevo" (onNuevoPersonaje)="agregarNuevoPersonaje($event)"></app-agregar> -->
+
+    <app-agregar [nuevo]="nuevo"></app-agregar>
+  </div>
+</div>
